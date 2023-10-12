@@ -16,12 +16,19 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Styles pour le mode sombre */
+#dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#patern-cover{
+  background-image: url('/Images/patern.png');
+  height: 400px;
+  width: 80%;
 }

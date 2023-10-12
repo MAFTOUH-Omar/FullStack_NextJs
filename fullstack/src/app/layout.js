@@ -1,7 +1,12 @@
+import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { AuthProvider } from '@/components/context/AuthContext'
+import { Inter , Latin } from 'next/font/google'
+import Footer from '@/components/Footer/Footer'
+
 
 const inter = Inter({ subsets: ['latin'] })
+const latin = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,9 +14,16 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={latin.className} id='light-mode'>
+        <AuthProvider>
+          <Navbar/>
+            {children}
+          <Footer/>
+        </AuthProvider>
+      </body>
     </html>
   )
 }
