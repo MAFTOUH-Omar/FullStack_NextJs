@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
-import { AuthProvider } from '@/components/context/AuthContext'
+import { AuthProvider } from '@/context/AuthContext'
 import { Inter , Latin } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
 
